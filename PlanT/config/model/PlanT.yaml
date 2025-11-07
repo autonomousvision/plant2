@@ -1,0 +1,56 @@
+name: PlanT
+
+waypoints:
+  representation: path+wps
+  generator: linear
+  path_len:  20
+  wps_len: 8
+
+  bins_speed: 8
+
+  path_weight: 5
+  wps_weight: 1
+  speed_weight: 1
+
+  gru_hidden_size: 64
+
+training:
+  range: 50
+  range_factor_front: 2
+  input_ego_speed: False
+  input_bev: True
+  input_static_cars: True
+
+  max_epochs: 30
+  batch_size: 128
+  learning_rate: 1e-4 # 1e-4
+  betas: [0.9, 0.95]
+  grad_norm_clip: 1.0
+  weight_decay: 0.1 # only applied on matmul weights
+
+  log_path: log/
+  num_workers: 16 # for DataLoader           #######################################
+  seq_len: 1
+  # max_NextRouteBBs: 2 # max 10 prevents really high ids if route is long
+  # input_ego: False # True ###############################################################################
+  # remove_velocity: None # input
+  # route_only_wp: False # True
+  # remove_back: False
+  # pretraining_path: none
+  augment: True
+  augment_parked: True
+
+pre_training:
+  # pretraining: forecast #none
+  # multitask: True
+  forecastLoss_weight: 1
+  future_timestep: 1
+  quantize: True
+  precision_pos: 7 # 7: 0.5meters
+  precision_speed: 5 # 4: 3.75km/h # changed from 4 to 5 bcs speed was changed from 60 to 120
+  precision_angle: 5 # 5: 11.25degrees
+
+network:
+  hf_checkpoint: prajjwal1/bert-medium #prajjwal1/bert-tiny, prajjwal1/bert-mini, prajjwal1/bert-small, prajjwal1/bert-medium
+  use_dropout: True
+  embd_pdrop: 0.1

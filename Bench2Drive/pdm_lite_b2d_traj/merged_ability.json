@@ -1,0 +1,11 @@
+{
+    "Overtaking": 0.9333333333333333,
+    "Merging": 0.8875,
+    "Emergency_Brake": 0.9833333333333333,
+    "Give_Way": 0.9,
+    "Traffic_Signs": 0.9368421052631579,
+    "mean": 0.9282017543859649,
+    "Driving Efficiency": 250.03924965239113,
+    "Driving Smoothness": 0.22191015855846374,
+    "crashed": []
+}
