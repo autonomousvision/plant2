@@ -3,7 +3,7 @@
 
 <p align="center">
   <h3 align="center">
-    <a href=""> Paper</a> | <a href="https://huggingface.co/datasets/SimonGer/PlanT2_Dataset">Dataset</a> | <a href="https://huggingface.co/SimonGer/PlanT2">Model</a> 
+    <a href="https://arxiv.org/abs/2511.07292"> Paper</a> | <a href="https://huggingface.co/datasets/SimonGer/PlanT2_Dataset">Dataset</a> | <a href="https://huggingface.co/SimonGer/PlanT2">Model</a> 
   </h3>
 </p>
 
