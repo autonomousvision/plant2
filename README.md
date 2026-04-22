@@ -48,7 +48,7 @@ conda activate plant2
 ```
 
 ## Quick start inference
-You can test the performance of the pretrained models using the CARLA leaderboard evaluator.
+You can test the performance of the [pretrained models](https://huggingface.co/SimonGer/PlanT2) using the CARLA leaderboard evaluator.
 
 Set the environment variables:
 ```bash
